@@ -8,30 +8,44 @@ const assignment = {};
  * Challenge - 1
  * 
  * Calculate and return the sum of the numbers in an array.
+
+return (sumOfNumbers)
  * If you did Challenge - 1, remove the comment in the line just after this function
  * 
  * @param {Array} arrayOfNumbers the array of numbers to sum
  * @returns number the sum of the numbers
  */
+let arrayOfNumbers= [11, 18, 43, 54, 65, 36, 17, 28, 19, 110];
 function sumOfNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+  var sumOfNumbers = 0;
+  for (i=0; i < arrayOfNumbers.length; i++){
+    sumOfNumbers += arrayOfNumbers[i];
+  }
+  return sumOfNumbers;
 }
-// assignment.sumOfNumbers = sumOfNumbers;
+assignment.sumOfNumbers = sumOfNumbers;
 
 /**
  * Challenge - 2
  * 
  * Count all even numbers within an array of numbers.
+
  * If you did Challenge - 2, remove the comment in the line just after this function
  * 
  * @param {Array} arrayOfNumbers the array containing even or non-even numbers
  * @returns number the count of even numbers
  */
 function countEvenNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+    count = 0; 
+    for (let i = 0; i < arrayOfNumbers.length; i++){
+        if (arrayOfNumbers[i] % 2 == 0){
+            count ++
+        }
+    }
+    return count;
 }
-// assignment.countEvenNumbers = countEvenNumbers;
-
+    // return arrayOfNumbers.length;
+ assignment.countEvenNumbers = countEvenNumbers;
 /**
  * Challenge - 3
  * 
@@ -47,9 +61,17 @@ function countEvenNumbers(arrayOfNumbers) {
  * @returns Array the converted temperatures in Fahrenheit
  */
 function celsiusToFahrenheit(arrayOfNumbers) {
+   arrayOfFahrenheit = []; 
+  
+    for (let i = 0; i < arrayOfNumbers.length; i++){
+        let celsuis = arrayOfNumbers[i];
+        
+        arrayOfFahrenheit.push(Math.floor((celsuis * (9/5)) + 32))
+    }
+    return arrayOfFahrenheit;
     return arrayOfNumbers;
 }
-// assignment.celsiusToFahrenheit = celsiusToFahrenheit;
+assignment.celsiusToFahrenheit = celsiusToFahrenheit;
 
 
 // ========================
